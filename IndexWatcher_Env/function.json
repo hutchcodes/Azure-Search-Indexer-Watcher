@@ -1,0 +1,21 @@
+{
+  "entryPoint": "IndexWatcher_Stage",
+  "bindings": [
+    {
+      "name": "myTimer",
+      "type": "timerTrigger",
+      "direction": "in",
+      "schedule": "0 0 * * * *"
+    },
+    {
+      "type": "sendGrid",
+      "name": "message",
+      "apiKey": "SendGridApiKey",
+      "to": "[your to email]",
+      "from": "[your from email]",
+      "subject": "Search Indexer Failed",
+      "direction": "out"
+    }
+  ],
+  "disabled": false
+}
